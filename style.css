@@ -1,0 +1,40 @@
+/* Base Styles */
+body { 
+    font-family: 'Inter', sans-serif; 
+    background-color: #f7f9fb; 
+}
+
+/* VCard Viewer Template Styles */
+.template-a-bg { background-color: #38b2ac; } /* Teal 500 */
+.template-a-contact-bar { background-color: #319795; } /* Teal 600 */
+.template-b-bg { background-color: #2b6cb0; } /* Blue 700 */
+.template-c-header { background-color: #4c51bf; } /* Indigo 700 */
+
+/* QR Generator Grid Styles */
+.qr-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    background-color: white;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+}
+.qr-container p {
+    margin-top: 8px;
+    font-size: 0.75rem; 
+    font-weight: 500;
+    text-align: center;
+    color: #4b5563; 
+    white-space: pre-line;
+    max-width: 100%;
+}
+.qr-canvas-wrapper canvas { display: block; }
+
+/* Responsive adjustments for QR grid */
+@media (max-width: 640px) {
+    #qrcodeOutput { 
+        grid-template-columns: repeat(2, minmax(0, 1fr)); 
+    }
+}

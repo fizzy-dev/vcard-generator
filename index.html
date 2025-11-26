@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batch VCard QR Code Generator</title>
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Dependencies -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+</head>
+<body class="p-4 md:p-8 flex items-start justify-center min-h-screen">
+
+    <!-- The main application container where content will be rendered dynamically by script.js -->
+    <div id="app-container" class="w-full max-w-4xl">
+        <div id="loading-initial" class="text-center p-12">
+            <!-- Initial Loading Spinner (styled in styles.css) -->
+            <svg class="animate-spin h-8 w-8 text-indigo-600 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            <p class="mt-3 text-gray-500">Initializing Application...</p>
+        </div>
+    </div>
+
+    <!-- Link to the main application logic (using type="module" for Firebase imports) -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
